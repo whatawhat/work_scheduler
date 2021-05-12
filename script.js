@@ -2,8 +2,6 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"))
 
 //Use moment for time to know if the time has past or if it's in the present or future
 
-//save entry to local storage
-
 //Gives the current hour
 //$(".hour").text(moment().format("hA"))
 
@@ -24,10 +22,10 @@ var currentHour = parseInt(moment().format("H"));
 for(var i=0; i = rows; i++) {
   
   //this SHOULD store the i-th element of the rows array.
-  var row = "something"
+  var row = document.querySelector("row");
 
   //this SHOULD store that row's number.
-  var hour = "somethingElse"
+  var hour = document.querySelector("row").id;
 
   if (currentHour === hour) {
       setColor (row, "red");
@@ -49,3 +47,6 @@ for(var i=0; i = rows; i++) {
 JS:
 var myData = document.querySelector(".myExample").id
 console.log(myData) //should print "Bruce Wayne" */}
+
+//save entry to local storage
+//use prevent Default so form doesn't reset
