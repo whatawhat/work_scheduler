@@ -25,7 +25,7 @@ for(var i=0; i = rows; i++) {
   var row = document.querySelector("row");
 
   //this SHOULD store that row's number.
-  var hour = document.querySelector("row").id;
+  var hour = document.querySelector(".row").getAttribute("id")  ;
 
   if (currentHour === hour) {
       setColor (row, "red");
