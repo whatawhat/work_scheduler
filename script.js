@@ -4,6 +4,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"))
 
 //save entry to local storage
 
+//Gives the current hour
 //$(".hour").text(moment().format("hA"))
 
 var format = "hh"
@@ -16,22 +17,35 @@ if (time === 9) {
 }
 
 const rows = document.getElementsByClassName("hour");
-
+console.log(rows) //shows an array of elements.
+console.log(rows[0]) //shows me the first element (the 9am block)
 var currentHour = parseInt(moment().format("H"));
 
-if (currentHour === hour) {
-    setColor (row, "");
-} else if (currentHour < hour) {
-    setColor (row, "");
-} else if (currentHour > hour) {
-    setColor(row, "");
-} else {
-    setColor (row, "white");
+for(var i=0; i = rows; i++) {
+  
+  //this SHOULD store the i-th element of the rows array.
+  var row = "something"
+
+  //this SHOULD store that row's number.
+  var hour = "somethingElse"
+
+  if (currentHour === hour) {
+      setColor (row, "red");
+  } else if (currentHour < hour) {
+      setColor (row, "gray");
+  } else if (currentHour > hour) {
+      setColor(row, "green");
+  } else {
+      setColor (row, "white");
+  }
 }
 
-function setColor(element, color) {
-    element.style.backgroundColor = color;
-}
+//finish for loop
+//redefine row and hour
 
-//Traverse the DOM maybe to find the time?
-//
+
+{/* <h1 class="myExample" id="bruceWayne">This is an H1 tag</h1>
+
+JS:
+var myData = document.querySelector(".myExample").id
+console.log(myData) //should print "Bruce Wayne" */}
