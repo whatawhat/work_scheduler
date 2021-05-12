@@ -10,43 +10,50 @@ var time = moment(format),
     beforeTime = moment(format),
     afterTime = moment(format);
 
-if (time === 9) {
+//$('#9').addClass('future')
 
-}
-
-const rows = document.getElementsByClassName("hour");
-console.log(rows) //shows an array of elements.
-console.log(rows[0]) //shows me the first element (the 9am block)
 var currentHour = parseInt(moment().format("H"));
 
-for(var i=0; i = rows; i++) {
+var rows = $(".row");
+console.log(parseInt(rows[0]))
+rows.each (function(i) {
+    console.log($(this).children().eq(1));
+    var rowHour = parseInt($(this).attr("id"));
+    
+    if (currentHour === rowHour) {
+        $(this).children().eq(1).addClass("present");
+    } else if (currentHour < rowHour) {
+        $(this).children().eq(1).addClass("future");
+    } else  {
+        $(this).children().eq(1).addClass("past");}
+    
+})
+
+console.log(rows) //shows an array of elements.
+// console.log(parseInt(rows[0].getAttribute("id"))) //shows me the first element (the 9am block)
+// var currentHour = parseInt(moment().format("H"));
+// console.log(currentHour);
+
+
   
   //this SHOULD store the i-th element of the rows array.
-  var row = document.querySelector("row");
+  //var row = document.querySelector("row");
 
   //this SHOULD store that row's number.
-  var hour = document.querySelector(".row").getAttribute("id")  ;
+  //var hour = document.querySelector(".row").getAttribute("id");
+//}
 
-  if (currentHour === hour) {
-      setColor (row, "red");
-  } else if (currentHour < hour) {
-      setColor (row, "gray");
-  } else if (currentHour > hour) {
-      setColor(row, "green");
-  } else {
-      setColor (row, "white");
-  }
-}
-
-//finish for loop
-//redefine row and hour
+//grab saveBtn; new function to grab 'this'; use jQuery; read about click
 
 
-{/* <h1 class="myExample" id="bruceWayne">This is an H1 tag</h1>
+/* <h1 class="myExample" id="bruceWayne">This is an H1 tag</h1>
 
 JS:
 var myData = document.querySelector(".myExample").id
-console.log(myData) //should print "Bruce Wayne" */}
+console.log(myData) //should print "Bruce Wayne" */
 
 //save entry to local storage
 //use prevent Default so form doesn't reset
+
+//use addClass() with jquery to connect to css file
+//Sampele and this should change my 9 to green: $('#9).addClass('future')
