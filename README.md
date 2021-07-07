@@ -5,3 +5,9 @@ The work scheduler allows the user to load for the day and save their tasks. If 
 Simply open the app and type in your schedule. For each time slot, click the save button so it's saved in case you close the browswer.
 ## Images
 ![Image of Work Day Scheduler](workday.png)
+## Links
+[Link to deployed application](file:///Users/stephaniedavis/Desktop/bootcamp/work_scheduler/index.html)
+
+[Link to Repository](https://github.com/whatawhat/work_scheduler)
+## Credits
+Created by me: [Stephanie Davis/@whatawhat](https://github.com/whatawhat)
