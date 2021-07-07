@@ -6,7 +6,7 @@ Simply open the app and type in your schedule. For each time slot, click the sav
 ## Images
 ![Image of Work Day Scheduler](workday.png)
 ## Links
-[Link to deployed application](file:///Users/stephaniedavis/Desktop/bootcamp/work_scheduler/index.html)
+[Link to deployed application](https://whatawhat.github.io/work_scheduler/)
 
 [Link to Repository](https://github.com/whatawhat/work_scheduler)
 ## Credits
